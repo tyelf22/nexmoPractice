@@ -1,3 +1,6 @@
+// Store api keys
+let apiConfig = require('./config')
+
 // import dependencies
 const express = require('express')
 const bodyparser = require('body-parser')
@@ -5,12 +8,14 @@ const ejs = require('ejs')
 const Nexmo = require('nexmo')
 const socketio = require('socket.io')
 
+//Use your own api key information here
 const nexmo = new Nexmo({
-    apiKey: '0b52da61',
-    apiSecret: 'TtoDaNWdLffq6o7z',
+    apiKey: apiConfig.apiKey,
+    apiSecret: apiConfig.apiSecret,
   })
 
-  const from = '13185814644'
+//Use your own virtual phone number that is created
+const from = apiConfig.phoneNumber
 
 
 // Initialize application with express

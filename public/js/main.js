@@ -1,7 +1,7 @@
 const numberInput = document.getElementById('number'),
         textInput = document.getElementById('msg'),
         button = document.getElementById('button'),
-        response = document.querySelector('.response')
+        response = document.getElementById('response')
 
 button.addEventListener('click', send, false )
 
